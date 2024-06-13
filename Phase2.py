@@ -27,6 +27,7 @@ with_clause_update = False
 max_spearman = 0.9
 true_weight = 0.7
 false_weight = 1 - true_weight
+neg_length = 50
 
 eval = Evaluation()
 def preprocess_text(text):
@@ -71,6 +72,7 @@ for dataset_name in os.listdir(Dicrectories.datasets):
                         sub_accumulation = sub_accumulation,
                         top_max_clauses1 = top_max_clauses1,
                         top_max_clauses2 = top_max_clauses2,
+                        neg_length = neg_length,
                         with_clause_update = with_clause_update,
                         true_weight = true_weight,
                         false_weight = false_weight,
