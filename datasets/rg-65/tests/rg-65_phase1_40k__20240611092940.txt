@@ -1,0 +1,99 @@
+Loading dataset: rg-65
+
+Epochs: 25
+Example: 2000
+Target words: 44
+Accumulation: 25
+Clauses: 1600
+T: 3200
+S: 5
+No of features: 40000
+
+TW file exists: woodland
+
+TW file exists: cushion
+
+TW file exists: cemetery
+
+TW file exists: bird
+
+TW file exists: automobile
+
+TW file exists: lad
+
+TW file exists: fruit
+
+TW file exists: crane
+
+TW file exists: slave
+
+TW file exists: hill
+
+TW file exists: shore
+
+TW file exists: glass
+
+TW file exists: jewel
+
+TW file exists: autograph
+
+TW file exists: journey
+
+TW file exists: car
+
+TW file exists: monk
+
+TW file exists: rooster
+
+TW file exists: implement
+
+TW file exists: pillow
+
+TW file exists: tool
+
+TW file exists: smile
+
+TW file exists: gem
+
+TW file exists: food
+
+TW file exists: midday
+
+TW file exists: voyage
+
+TW file exists: string
+
+TW file exists: furnace
+
+TW file exists: asylum
+
+TW file exists: wizard
+
+TW file exists: stove
+
+TW file exists: boy
+
+TW file exists: mound
+
+TW file exists: coast
+
+TW file exists: grin
+
+TW file exists: magician
+
+TW file exists: signature
+
+TW file exists: cord
+
+TW file exists: noon
+
+TW file exists: forest
+
+TW file exists: brother
+
+TW file exists: oracle
+
+TW file exists: graveyard
+
+TW file exists: sage
+Training duration: 0 hours, 0 minutes, 0 seconds

@@ -1,0 +1,10 @@
+Loading dataset: rg-65
+
+Epochs: 25
+Example: 2000
+Target words: 44
+Accumulation: 25
+Clauses: 1600
+T: 3200
+S: 5
+No of features: 40000
