@@ -31,7 +31,7 @@ false_weight = 1 - true_weight
 eval = Evaluation()
 def preprocess_text(text):
     return text
-vectorizer_X = Tools.read_pickle_data("big_vectorizer_X.pickle")
+vectorizer_X = Tools.read_pickle_data("vectorizer_X.pickle")
 feature_names = vectorizer_X.get_feature_names_out()
 number_of_features = vectorizer_X.get_feature_names_out().shape[0]
 
