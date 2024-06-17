@@ -43,7 +43,7 @@ for dataset_name in os.listdir(Dicrectories.datasets):
             files_start_name = os.path.join(current_folder_path, dataset_name)
 
             pair_list = Tools.get_dataset_pairs(files_start_name)
-            output_active, target_words = Tools.get_dataset_targets(files_start_name,pair_list, vectorizer_X)
+            output_active, target_words = Tools.get_dataset_targets(files_start_name, vectorizer_X, pair_list)
             
             result_filepath = Dicrectories.test(dataset_name,"all_phase2")
             with open(result_filepath, 'w') as file, redirect_stdout(file):
