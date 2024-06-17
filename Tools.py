@@ -65,10 +65,10 @@ class Tools:
                 try:
                     return pickle.load(saved)
                 except (pickle.UnpicklingError, EOFError):
-                    print("Error: The file could not be unpickled.")
+                    print("Error: The file could not be unpickled: ",path)
                     return []
         else:
-            print("Error: The file does not exist.")
+            print("Error: The file does not exist: ",path)
             return []
     
     @staticmethod
