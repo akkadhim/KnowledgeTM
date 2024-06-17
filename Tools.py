@@ -35,8 +35,9 @@ class Tools:
         return words
         
     @staticmethod
-    def get_dataset_targets(base_path):
-        pair_list = Tools.get_dataset_pairs(base_path)
+    def get_dataset_targets(base_path, vectorizer_X, pair_list = None):
+        if pair_list == None:
+            pair_list = Tools.get_dataset_pairs(base_path)
         word1 = []
         word2 = []
         for (x,y) in pair_list:
@@ -45,11 +46,13 @@ class Tools:
             word2.append(w2)
                 
         word_total= list(set(word1 + word2))
-        vectorizer_X = Tools.read_pickle_data("vectorizer_X.pickle")
+        print("Dataset words count: ", len(word_total))
         target_words=[]
         for i in word_total:
-            if i in vectorizer_X.vocabulary_:
-                target_words.append(i)
+            if i in vectorizer_X.vocabulary_ :
+                file_path = Dicrectories.pickle_by_id(Dicrectories.knowledge , str(vectorizer_X.vocabulary_[i]))
+                if Dicrectories.pickle_exist(file_path):
+                    target_words.append(i)
         output_active = np.empty(len(target_words), dtype=np.uint32)
         for i in range(len(target_words)):
             target_word = target_words[i]
