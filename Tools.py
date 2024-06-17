@@ -3,6 +3,7 @@ import pickle
 import numpy as np
 from functools import lru_cache
 import codecs
+from DirectoriesUtil import Dicrectories
 
 class Tools:
     @staticmethod
@@ -59,8 +60,16 @@ class Tools:
     @staticmethod    
     @lru_cache(maxsize=None)
     def read_pickle_data(path):
-        with open(path, "rb") as saved:
-            return pickle.load(saved)
+        if Dicrectories.pickle_exist(path):
+            with open(path, "rb") as saved:
+                try:
+                    return pickle.load(saved)
+                except (pickle.UnpicklingError, EOFError):
+                    print("Error: The file could not be unpickled.")
+                    return []
+        else:
+            print("Error: The file does not exist.")
+            return []
     
     @staticmethod
     def print_training_time(seconds):
