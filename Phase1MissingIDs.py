@@ -56,7 +56,7 @@ for id in sorted(missing_ids):
     word = vectorizer_X.get_feature_names_out()[id]
     output_active[i] = id
     target_words.append(i)
-    print(id)
+    # print(id)
     i = i + 1
     
 print("Loading missing IDs")
