@@ -67,7 +67,7 @@ for dataset_name in os.listdir(Dicrectories.datasets):
                         training_time = 0
                     else:
                         print("\nTW run: %s" % vectorizer_X.get_feature_names_out()[tw])
-                        training_time, target_word_clauses = knowledge.generate(X_train, current_folder_path, tw)
+                        training_time, target_word_clauses = knowledge.generate(X_train, tw)
                         
                     total_training_time = total_training_time + training_time
                     clauses_progress_bar = tqdm(total=len(target_word_clauses), desc="Running Clauses")
@@ -82,7 +82,7 @@ for dataset_name in os.listdir(Dicrectories.datasets):
                                 # print("Feature file exists: %s" % vectorizer_X.get_feature_names_out()[literal])
                             else:
                                 print("Feature run: %s" % vectorizer_X.get_feature_names_out()[literal])
-                                training_time, inner_target_word_clauses = knowledge.generate(X_train, current_folder_path, literal)
+                                training_time, inner_target_word_clauses = knowledge.generate(X_train, literal)
                                 total_training_time = total_training_time + training_time
                             # feature_progress_bar.update(1)
                         # feature_progress_bar.close()

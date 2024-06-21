@@ -18,7 +18,7 @@ class Knowledge:
         self.s = s
         self.epochs = epochs
 
-    def generate(self, X_train, dataset_name, i):
+    def generate(self, X_train, i):
         target_word_clauses = []
         single_output_active = np.empty(1, dtype=np.uint32)
         single_output_active[0] = i
